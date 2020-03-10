@@ -28,9 +28,7 @@ define([
         initMap: function () {
 
             this.map = mapConfig.initMap();
-
             this.map.on("load", () => {
-
                 this.initLayers();
                 this.initScaleBar();
                 this.initSearch();

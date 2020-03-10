@@ -15,6 +15,7 @@ define([
 					path: 'app/widgets/example/example'
 				}
 			},
+		
 			//dropdown menu
 			{
 				type: 'dorpdown',
@@ -29,7 +30,17 @@ define([
 						path: 'app/widgets/draw/draw'
 					}
 				}]
-			}
+			},
+			{
+				type: 'simple',
+				title: i18n.Test,
+				icon: '',
+				widget: {
+					title: i18n.Test,
+					icon: '<i class="fa fa-clone"></i>',
+					path: 'app/widgets/test/test'
+				}
+			},
 		]
 
 

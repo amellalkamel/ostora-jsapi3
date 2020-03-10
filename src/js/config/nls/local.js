@@ -6,7 +6,8 @@ define({
         algeria:"Algeria states",
         satellite:"World Imagery",
         streets:"World Street Map",
-        osm :"Open Street Map"
+        osm :"Open Street Map",
+        Test:"Test"
     },
     "ar": true
 });

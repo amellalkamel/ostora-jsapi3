@@ -20,7 +20,7 @@ define([
         initMap() {
 
             this._map = new Map("mapDiv", {
-                zoom: 6, // Sets zoom level based on level of detail (LOD)            
+                zoom: 7, // Sets zoom level based on level of detail (LOD)            
                 center: [3.262939, 36.618283], // Sets center point of view using longitude,latitude
                 basemap: "streets"
             });
@@ -54,6 +54,15 @@ define([
                     })],
                     id: "osm",
                     title: i18n.osm,
+                    thumbnailUrl: "https://a.tile.openstreetmap.org/6/31/25.png"
+                }),
+                new Basemap({
+                    layers: [new BasemapLayer({
+                        url:'https://10.6.99.187:6443/arcgis/rest/services/OufokMapSevices/FDP1000_WGS84/MapServer',
+                    
+                    })],
+                    id: "alger",
+                    title:"Algerie",
                     thumbnailUrl: "https://a.tile.openstreetmap.org/6/31/25.png"
                 })
             ];

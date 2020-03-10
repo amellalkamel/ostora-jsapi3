@@ -5,6 +5,7 @@
 @import '../app/aside/aside';
 @import '../app/widgets/widgetContainer';
 @import 'theme_chiller';
+@import '../app/leftMenu/menu';
 html {
     font-size: initial;
 }
@@ -15,7 +16,8 @@ body {
 }
 
 #main {
-    width: 100vw;
+    width: 97vw;
+    margin-left: 3vw;
     height: calc(100vh - 56px);
     margin-top: 56px;
     overflow: hidden;

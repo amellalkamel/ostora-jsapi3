@@ -4,8 +4,9 @@ define([
     "js/loader",
     "app/header/header",
     "app/aside/aside",
-    "app/widgets/widgetContainer"
-], function (require, widgetConfig, loader, header, aside, widgetContainer) {
+    "app/widgets/widgetContainer",
+    "app/leftMenu/menu"
+], function (require, widgetConfig, loader, header, aside, widgetContainer, menuWidget) {
 
     return {
         startup: function (map) {
@@ -16,6 +17,8 @@ define([
             //create an instance of aside widget and add it's domNode (html code) to the documents in the #main element       
             this.createAsideWidget(map);
 
+            //create menu widget
+            this.createMenuWidget(map);
             widgetConfig.menus.forEach((menu) => {
                 if (menu.type == 'simple') {
                     //case of widget with a simple menu
@@ -42,6 +45,15 @@ define([
             $('#main').append($(asideWidget.domNode));
 
             asideWidget.startup();
+        },
+        createMenuWidget (map)
+        {
+
+            let menuWidget = new menuWidget();
+            console.log("hfghgfhfghf",map)
+            // menuWidget.map = map;
+            // $('.menu').append($(menuWidget.domNode));
+            // menuWidget.startup();
         },
         simpleMenuWidget: function (menuConfig, widgetContainer, map) {
             // In case of simple menu we only create a link without dropdown

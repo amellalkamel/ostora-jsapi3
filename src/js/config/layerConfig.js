@@ -9,16 +9,31 @@ define([
         _layers: [],
         initLayers() {
             this._layers = [
-                new FeatureLayer('http://services.arcgis.com/P8Cok4qAP1sTVE59/arcgis/rest/services/ALG_ADMLEVEL2/FeatureServer/0', {
+                new FeatureLayer('https://10.6.99.187:6443/arcgis/rest/services/OufokLocatorServices/BatiLocator/GeocodeServer', {
                     title: i18n.algeria,
                     id: i18n.algeria,
                     mode: FeatureLayer.MODE_SNAPSHOT,
                     outFields: ["*"],
-                    infoTemplate: new PopupTemplate({
-                        title: "{FIRST_NAME}",
-                        description: "{FIRST_NAME}"
-                    })
-                })
+                    // infoTemplate: new PopupTemplate({
+                    //     title: "{FIRST_NAME}",
+                    //     description: "{FIRST_NAME}"
+                    // })
+                }),
+                new FeatureLayer('https://10.6.99.187:6443/arcgis/rest/services/OufokLocatorServices/RouteOSM/GeocodeServer', {
+                title: "Noms de Routes/Rues",
+                mode: FeatureLayer.MODE_SNAPSHOT,
+                outFields: ["*"],
+                }),
+                new FeatureLayer('https://10.6.99.187:6443/arcgis/rest/services/OufokLocatorServices/Commune/GeocodeServer', {
+                title: "Communes d'Algérie",
+                mode: FeatureLayer.MODE_SNAPSHOT,
+                outFields: ["*"],
+                }),
+                new FeatureLayer('https://10.6.99.187:6443/arcgis/rest/services/OufokLocatorServices/PostesDD/GeocodeServer', {
+                title: "Postes HTA/BT",
+                mode: FeatureLayer.MODE_SNAPSHOT,
+                outFields: ["*"],
+                }),
             ]
             return this._layers;
         },
