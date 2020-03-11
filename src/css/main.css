@@ -458,6 +458,11 @@ aside.sideBar {
 .modal-open .widgetContainer {
   z-index: auto !important; }
 
+.leftMenu {
+  background-color: black;
+  height: 100%;
+  flex-basis: 40px; }
+
 .chiller-theme nav.navbar {
   background-color: #24262d !important; }
   .chiller-theme nav.navbar .badge {
@@ -599,9 +604,6 @@ aside.sideBar {
   color: #d4513d;
   display: inline-block; }
 
-.menu {
-  background-color: black; }
-
 html {
   font-size: initial; }
 
@@ -610,16 +612,16 @@ body {
   background: #aad3df; }
 
 #main {
-  width: 97vw;
-  margin-left: 3vw;
+  width: 100vw;
   height: calc(100vh - 56px);
   margin-top: 56px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  display: flex; }
   #main #mapDiv {
-    width: 100%;
     height: 100%;
-    background: #aad3df; }
+    background: #aad3df;
+    flex-grow: 1; }
 
 #footer {
   position: fixed;
@@ -627,6 +629,11 @@ body {
   width: 100%;
   bottom: 0;
   left: 0; }
+
+#leftMenu {
+  width: 3vw;
+  margin-top: 100px;
+  background-color: seagreen; }
 
 .form-control,
 .btn,

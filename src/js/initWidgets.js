@@ -5,8 +5,8 @@ define([
     "app/header/header",
     "app/aside/aside",
     "app/widgets/widgetContainer",
-    "app/leftMenu/menu"
-], function (require, widgetConfig, loader, header, aside, widgetContainer, menuWidget) {
+    "app/leftMenu/leftMenu"
+], function (require, widgetConfig, loader, header, aside, widgetContainer, leftMenu) {
 
     return {
         startup: function (map) {
@@ -34,6 +34,7 @@ define([
 
             let headerWidget = new header();
             headerWidget.map = map; //this is added so the map can be accessed in the widget
+            console.log('menuWidget.domNode',headerWidget.domNode)
             $('#header').append($(headerWidget.domNode));
 
             headerWidget.startup();
@@ -49,11 +50,11 @@ define([
         createMenuWidget (map)
         {
 
-            let menuWidget = new menuWidget();
-            console.log("hfghgfhfghf",map)
-            // menuWidget.map = map;
-            // $('.menu').append($(menuWidget.domNode));
-            // menuWidget.startup();
+            let menuWidget = new leftMenu();
+            menuWidget.map = map;
+            console.log('menuWidget.domNode',menuWidget.domNode)
+            $('.leftMenu').append($(menuWidget.domNode));
+            menuWidget.startup();
         },
         simpleMenuWidget: function (menuConfig, widgetContainer, map) {
             // In case of simple menu we only create a link without dropdown

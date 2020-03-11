@@ -30,32 +30,32 @@ define([
         initBasemaps() {
             // a list of basemaps that will be used in basemap gallery
             this._basemaps = [
-                new Basemap({
-                    layers: [new BasemapLayer({
-                        url: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/"
-                    })],
-                    id: "streets",
-                    title: i18n.streets,
-                    thumbnailUrl: "https://stamen-tiles.a.ssl.fastly.net/terrain/10/177/409.png"
-                }),
-                new Basemap({
-                    layers: [new BasemapLayer({
-                        url: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
-                    })],
-                    id: "satellite",
-                    title: i18n.satellite,
-                    thumbnailUrl: "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/4/5/4"
-                }),
-                new Basemap({
-                    layers: [new BasemapLayer({
-                        type: 'WebTiledLayer',
-                        url: "https://{subDomain}.tile.openstreetmap.org/{level}/{col}/{row}.png",
-                        subDomains: ["a", "b", "c"]
-                    })],
-                    id: "osm",
-                    title: i18n.osm,
-                    thumbnailUrl: "https://a.tile.openstreetmap.org/6/31/25.png"
-                }),
+                // new Basemap({
+                //     layers: [new BasemapLayer({
+                //         url: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/"
+                //     })],
+                //     id: "streets",
+                //     title: i18n.streets,
+                //     thumbnailUrl: "https://stamen-tiles.a.ssl.fastly.net/terrain/10/177/409.png"
+                // }),
+                // new Basemap({
+                //     layers: [new BasemapLayer({
+                //         url: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
+                //     })],
+                //     id: "satellite",
+                //     title: i18n.satellite,
+                //     thumbnailUrl: "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/4/5/4"
+                // }),
+                // new Basemap({
+                //     layers: [new BasemapLayer({
+                //         type: 'WebTiledLayer',
+                //         url: "https://{subDomain}.tile.openstreetmap.org/{level}/{col}/{row}.png",
+                //         subDomains: ["a", "b", "c"]
+                //     })],
+                //     id: "osm",
+                //     title: i18n.osm,
+                //     thumbnailUrl: "https://a.tile.openstreetmap.org/6/31/25.png"
+                // }),
                 new Basemap({
                     layers: [new BasemapLayer({
                         url:'https://10.6.99.187:6443/arcgis/rest/services/OufokMapSevices/FDP1000_WGS84/MapServer',
