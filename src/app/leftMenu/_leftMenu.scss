@@ -1,7 +1,18 @@
 .leftMenu {
-background-color: black;
+background-color: white;
 height: 100%;
 flex-basis: 40px;
+position: relative;
 // flex-shrink: 0;
+ul.gb-li li
+{
+    list-style: none;
+    right: 0;
+    margin-left: -25px;
+    display: block;
+    margin-top: 100%;
+
+}
+
 
 }

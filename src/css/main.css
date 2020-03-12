@@ -459,9 +459,16 @@ aside.sideBar {
   z-index: auto !important; }
 
 .leftMenu {
-  background-color: black;
+  background-color: white;
   height: 100%;
-  flex-basis: 40px; }
+  flex-basis: 40px;
+  position: relative; }
+  .leftMenu ul.gb-li li {
+    list-style: none;
+    right: 0;
+    margin-left: -25px;
+    display: block;
+    margin-top: 100%; }
 
 .chiller-theme nav.navbar {
   background-color: #24262d !important; }
