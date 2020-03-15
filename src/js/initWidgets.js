@@ -19,6 +19,7 @@ define([
 
             //create menu widget
             this.createMenuWidget(map);
+
             widgetConfig.menus.forEach((menu) => {
                 if (menu.type == 'simple') {
                     //case of widget with a simple menu

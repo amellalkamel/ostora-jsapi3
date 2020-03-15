@@ -26,9 +26,15 @@ define([
 
                     e.preventDefault();
                     $(".sideBar").toggleClass("hidden");
+                    console.log('kamaaaaaaaaaaaaaaaaaal')
+                });
+                //kamel
+                $(this.domNode).find('#toggle-side').click(function (e) {
+                    console.log('kamaaaaaaaaaaaaaaaaaal 22222222222')
+                    e.preventDefault();
+                    $(".leftMenu").toggle( "slide", "4000" );
 
                 });
-
                 $(this.domNode).find('#changeLanguage').click(function (e) {
 
                     e.preventDefault();
